@@ -102,6 +102,7 @@ import SlideNotulensi from "./components/SlideNotulensi.vue";
 import SlideProposal from "./components/SlideProposal.vue";
 import SlideKearsipan from "./components/SlideKearsipan.vue";
 import SlideKoordinasi from "./components/SlideKoordinasi.vue";
+import SlideKuis from "./components/SlideKuis.vue";
 
 // Slide array
 const slides = [
@@ -112,6 +113,7 @@ const slides = [
   SlideProposal,
   SlideKearsipan,
   SlideKoordinasi,
+  SlideKuis
 ];
 
 const totalSlides = slides.length;
@@ -121,7 +123,7 @@ const direction = ref('next')
 // derive simple titles from components (fallback to index)
 const slideTitles = slides.map((comp, i) => {
   // try to read a 'title' export on the component, otherwise fallback
-  return comp.name || ['Welcome','Alur','Surat','Notulensi','Proposal','Kearsipan','Koordinasi'][i] || `Slide ${i+1}`
+  return comp.name || ['Welcome','Alur','Surat','Notulensi','Proposal','Kearsipan','Koordinasi', 'Kuis'][i] || `Slide ${i+1}`
 })
 
 function onSelectChange(e) {
